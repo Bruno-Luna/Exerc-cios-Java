@@ -7,9 +7,9 @@ public class ClienteTeste {
 
 		//instanciando um objeto da classe
 
-		Cliente charlo = new Cliente ("Caloi", "Mountain-Bike", 2021);
+		Cliente cliente1 = new Cliente ("Amanda Luna", "Gts Aro 29 1x12 Deore F Hidráulico Full Carbono Cl", 3278830, "Mountain-Bike", 2021);
 		
-		charlo.imprimirInfo();
+		cliente1.imprimirInfo();
 		
 	}
 
