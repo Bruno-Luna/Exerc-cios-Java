@@ -10,75 +10,66 @@ public class Cliente {
 
 	//criação dos atributos da classe
 	
-	public String nome;
-	public String bike;
-	public double valor;
-	public String modelo;
-	public int ano;
+	private String nome;
+	private String endereco;
+	private int telefone;
+	private int cpf;
 	
 	// criação do método construtor
 	
-	public Cliente(String nome,String bike, double valor, String modelo, int ano)
+	public Cliente(String nom ,String end, int tel, int cpf)
 	{
-		this.nome = nome;
-		this.bike = bike;
-		this.valor = valor;
-		this.modelo = modelo;
-		this.ano = ano;
+		this.nome = nom;
+		this.endereco = end;
+		this.telefone = tel;
+		this.cpf = cpf;
 	}
+
 
 	public String getNome() {
 		return nome;
 	}
 
+
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
-	public String getBike() {
-		return bike;
+
+
+	public String getEndereco() {
+		return endereco;
 	}
 
-	public void setBike(String bike) {
-		this.bike = bike;
+
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
 	}
 
-	public String getModelo() {
-		return modelo;
+
+	public int getTelefone() {
+		return telefone;
 	}
 
-	public double getValor() {
-		return valor;
+
+	public void setTelefone(int telefone) {
+		this.telefone = telefone;
 	}
 
-	public void setValor(double valor) {
-		this.valor = valor;
+
+	public int getCpf() {
+		return cpf;
 	}
 
-	public void setModelo(String modelo) {
-		this.modelo = modelo;
+
+	public void setCpf(int cpf) {
+		this.cpf = cpf;
 	}
 
-	public int getAno() {
-		return ano;
-	}
-
-	public void setAno(int ano) {
-		this.ano = ano;
-	}
-	
-	public String formatarMoeda()
-	{
-		NumberFormat nf = NumberFormat.getCurrencyInstance(); //define a moeda padrão do pais
-		nf.setMinimumFractionDigits(2);//define a quantidade de casas depois da vírgula
-		String formatoMoeda = nf.format(valor);//formata a saída do salário
-		return formatoMoeda;
-	}
 
 	public void imprimirInfo()
 	{
-		System.out.println("\t\t ::: Compra ::: \n\n"
-		 +"Cliente: " +nome	+ "\nBicicleta: "+bike
-		 +"\nValor: " + valor+ "\nModelo: "+modelo+ "\nAno: " +ano);
+		System.out.println("\t\t ::: Informações Pessoais ::: \n\n"
+		 +"Cliente: " +nome	+ "\nEndereço: "+endereco
+		 +"\nTelefone: " + telefone + "\nCPF: "+cpf);
 	}
 }
